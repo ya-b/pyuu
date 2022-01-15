@@ -1,0 +1,524 @@
+{
+    "keepfrds": {
+        "id": 1,
+        "site": "keepfrds",
+        "nickname": "朋友",
+        "base_url": "pt.keepfrds.com",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "pthome": {
+        "id": 2,
+        "site": "pthome",
+        "nickname": "铂金家",
+        "base_url": "pthome.net",
+        "download_page": "download.php?id={}&uid={uid}&hash={hash}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "m-team": {
+        "id": 3,
+        "site": "m-team",
+        "nickname": "馒头",
+        "base_url": "kp.m-team.cc",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hdsky": {
+        "id": 4,
+        "site": "hdsky",
+        "nickname": "天空",
+        "base_url": "hdsky.me",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "cookie",
+        "is_https": 2
+    },
+    "tjupt": {
+        "id": 5,
+        "site": "tjupt",
+        "nickname": "北洋",
+        "base_url": "tjupt.org",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "pter": {
+        "id": 6,
+        "site": "pter",
+        "nickname": "猫站",
+        "base_url": "pterclub.com",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hdhome": {
+        "id": 7,
+        "site": "hdhome",
+        "nickname": "家园",
+        "base_url": "hdhome.org",
+        "download_page": "download.php?id={}&uid={uid}&hash={hash}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "btschool": {
+        "id": 8,
+        "site": "btschool",
+        "nickname": "学校",
+        "base_url": "pt.btschool.club",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "ourbits": {
+        "id": 9,
+        "site": "ourbits",
+        "nickname": "我堡",
+        "base_url": "ourbits.club",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hddolby": {
+        "id": 10,
+        "site": "hddolby",
+        "nickname": "杜比",
+        "base_url": "www.hddolby.com",
+        "download_page": "download.php?id={}&uid={uid}&hash={hash}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "torrentccf": {
+        "id": 11,
+        "site": "torrentccf",
+        "nickname": "他吹吹风",
+        "base_url": "et8.org",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "ptmsg": {
+        "id": 12,
+        "site": "ptmsg",
+        "nickname": "马杀鸡",
+        "base_url": "pt.msg.vg",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "ttg": {
+        "id": 14,
+        "site": "ttg",
+        "nickname": "听听歌",
+        "base_url": "totheglory.im",
+        "download_page": "dl\/{}\/{passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "nanyangpt": {
+        "id": 15,
+        "site": "nanyangpt",
+        "nickname": "南洋",
+        "base_url": "nanyangpt.com",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hdcity": {
+        "id": 17,
+        "site": "hdcity",
+        "nickname": "城市",
+        "base_url": "hdcity.city",
+        "download_page": "download?id={}&cuhash={cuhash}",
+        "reseed_check": "cookie",
+        "is_https": 2
+    },
+    "nicept": {
+        "id": 18,
+        "site": "nicept",
+        "nickname": "老师",
+        "base_url": "www.nicept.net",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "52pt": {
+        "id": 19,
+        "site": "52pt",
+        "nickname": "52pt",
+        "base_url": "52pt.site",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "beitai": {
+        "id": 21,
+        "site": "beitai",
+        "nickname": "备胎",
+        "base_url": "www.beitai.pt",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "eastgame": {
+        "id": 22,
+        "site": "eastgame",
+        "nickname": "吐鲁番",
+        "base_url": "pt.eastgame.org",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "ssd": {
+        "id": 23,
+        "site": "ssd",
+        "nickname": "春天",
+        "base_url": "springsunday.net",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "soulvoice": {
+        "id": 24,
+        "site": "soulvoice",
+        "nickname": "聆音",
+        "base_url": "pt.soulvoice.club",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "chdbits": {
+        "id": 25,
+        "site": "chdbits",
+        "nickname": "彩虹岛",
+        "base_url": "chdbits.co",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "leaguehd": {
+        "id": 26,
+        "site": "leaguehd",
+        "nickname": "柠檬",
+        "base_url": "lemonhd.org",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "ptsbao": {
+        "id": 27,
+        "site": "ptsbao",
+        "nickname": "烧包",
+        "base_url": "ptsbao.club",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hdchina": {
+        "id": 28,
+        "site": "hdchina",
+        "nickname": "瓷器",
+        "base_url": "hdchina.org",
+        "download_page": "download.php?hash={hash}",
+        "reseed_check": "cookie",
+        "is_https": 2
+    },
+    "hdarea": {
+        "id": 29,
+        "site": "hdarea",
+        "nickname": "好大",
+        "base_url": "www.hdarea.co",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hdtime": {
+        "id": 30,
+        "site": "hdtime",
+        "nickname": "时光",
+        "base_url": "hdtime.org",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "1ptba": {
+        "id": 31,
+        "site": "1ptba",
+        "nickname": "1ptba",
+        "base_url": "1ptba.com",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hd4fans": {
+        "id": 32,
+        "site": "hd4fans",
+        "nickname": "兽",
+        "base_url": "pt.hd4fans.org",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "opencd": {
+        "id": 33,
+        "site": "opencd",
+        "nickname": "皇后",
+        "base_url": "open.cd",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "joyhd": {
+        "id": 36,
+        "site": "joyhd",
+        "nickname": "开心",
+        "base_url": "www.joyhd.net",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "dmhy": {
+        "id": 37,
+        "site": "dmhy",
+        "nickname": "幼儿园",
+        "base_url": "u2.dmhy.org",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "upxin": {
+        "id": 38,
+        "site": "upxin",
+        "nickname": "好多油",
+        "base_url": "pt.upxin.net",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "oshen": {
+        "id": 39,
+        "site": "oshen",
+        "nickname": "奥申",
+        "base_url": "www.oshen.win",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "discfan": {
+        "id": 40,
+        "site": "discfan",
+        "nickname": "蝶粉",
+        "base_url": "discfan.net",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hdzone": {
+        "id": 41,
+        "site": "hdzone",
+        "nickname": "高清地带",
+        "base_url": "hdzone.me",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hdbd": {
+        "id": 44,
+        "site": "hdbd",
+        "nickname": "伊甸园",
+        "base_url": "pt.hdbd.us",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "byr": {
+        "id": 45,
+        "site": "byr",
+        "nickname": "北邮人",
+        "base_url": "byr.pt",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "ccfbits": {
+        "id": 47,
+        "site": "ccfbits",
+        "nickname": "吹吹风",
+        "base_url": "ccfbits.org",
+        "download_page": "feeddownload.php\/{}\/{passkey}\/{}.torrent",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hdbits": {
+        "id": 48,
+        "site": "hdbits",
+        "nickname": "海德堡",
+        "base_url": "hdbits.org",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "",
+        "is_https": 2
+    },
+    "ptpbd": {
+        "id": 49,
+        "site": "ptpbd",
+        "nickname": "PTP",
+        "base_url": "passthepopcorn.me",
+        "download_page": "torrents.php?action=download&authkey={authkey}&torrent_pass={torrent_pass}&id={}",
+        "reseed_check": "torrent_pass,authkey",
+        "is_https": 2
+    },
+    "hd-torrents": {
+        "id": 50,
+        "site": "hd-torrents",
+        "nickname": "核弹头",
+        "base_url": "hd-torrents.org",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "",
+        "is_https": 2
+    },
+    "dicmusic": {
+        "id": 51,
+        "site": "dicmusic",
+        "nickname": "海豚",
+        "base_url": "dicmusic.club",
+        "download_page": "torrents.php?action=download&id={}&authkey={authkey}&torrent_pass={torrent_pass}",
+        "reseed_check": "torrent_pass,authkey",
+        "is_https": 2
+    },
+    "skyeysnow": {
+        "id": 52,
+        "site": "skyeysnow",
+        "nickname": "天雪",
+        "base_url": "skyey2.com",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "pt": {
+        "id": 53,
+        "site": "pt",
+        "nickname": "葡萄",
+        "base_url": "pt.sjtu.edu.cn",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hdroute": {
+        "id": 54,
+        "site": "hdroute",
+        "nickname": "路",
+        "base_url": "www.hdroute.org",
+        "download_page": "download.php?id={}&passkey={passkey}&from=rss",
+        "reseed_check": "passkey",
+        "is_https": 0
+    },
+    "haidan": {
+        "id": 56,
+        "site": "haidan",
+        "nickname": "海胆",
+        "base_url": "www.haidan.video",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hdfans": {
+        "id": 57,
+        "site": "hdfans",
+        "nickname": "红豆饭",
+        "base_url": "hdfans.org",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "dragonhd": {
+        "id": 58,
+        "site": "dragonhd",
+        "nickname": "龙之家",
+        "base_url": "www.dragonhd.xyz",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hitpt": {
+        "id": 59,
+        "site": "hitpt",
+        "nickname": "百川",
+        "base_url": "www.hitpt.com",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "pttime": {
+        "id": 60,
+        "site": "pttime",
+        "nickname": "时间",
+        "base_url": "www.pttime.org",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 2
+    },
+    "hdai": {
+        "id": 61,
+        "site": "hdai",
+        "nickname": "海带",
+        "base_url": "www.hd.ai",
+        "download_page": "download.php?id={}&uid={uid}&hash={hash}",
+        "reseed_check": "passkey,uid",
+        "is_https": 2
+    },
+    "npupt": {
+        "id": 62,
+        "site": "npupt",
+        "nickname": "蒲公英",
+        "base_url": "npupt.com",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 1
+    },
+    "hdatmos": {
+        "id": 63,
+        "site": "hdatmos",
+        "nickname": "阿童木",
+        "base_url": "hdatmos.club",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 1
+    },
+    "greatposterwall": {
+        "id": 64,
+        "site": "greatposterwall",
+        "nickname": "海豹",
+        "base_url": "greatposterwall.com",
+        "download_page": "torrents.php?action=download&id={}&authkey={authkey}&torrent_pass={torrent_pass}",
+        "reseed_check": "torrent_pass,authkey",
+        "is_https": 1
+    },
+    "hdpost": {
+        "id": 65,
+        "site": "hdpost",
+        "nickname": "普斯特",
+        "base_url": "pt.hdpost.top",
+        "download_page": "torrent\/download\/{}.{rsskey}",
+        "reseed_check": "rsskey",
+        "is_https": 1
+    },
+    "hares": {
+        "id": 66,
+        "site": "hares",
+        "nickname": "大白兔",
+        "base_url": "club.hares.top",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 1
+    },
+    "hudbt": {
+        "id": 67,
+        "site": "hudbt",
+        "nickname": "蝴蝶",
+        "base_url": "hudbt.hust.edu.cn",
+        "download_page": "download.php?id={}&passkey={passkey}",
+        "reseed_check": "passkey",
+        "is_https": 1
+    }
+}

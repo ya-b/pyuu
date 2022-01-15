@@ -1,0 +1,5 @@
+bencode.py==4.0.0
+qbittorrent_api==2021.12.26
+requests==2.23.0
+tqdm==4.62.3
+transmissionrpc==0.11
