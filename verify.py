@@ -9,6 +9,7 @@ from tqdm import tqdm
 class Verify:
     def __init__(self):
         self.SHA1_LEN = 20
+        self.cache = {}
 
     def verify_piece(self, data, piece):
         return hmac.compare_digest(piece, hashlib.sha1(data).digest())
@@ -54,6 +55,8 @@ class Verify:
         print(f'verifing:{torrent}')
         with open(torrent, 'rb') as f:
             info = bencode.bdecode(f.read())['info']
+        if info['pieces'] in self.cache:
+            return self.cache[info['pieces']]
         path = os.path.join(output, info['name'])
         files = []
         if 'files' not in info:
@@ -63,4 +66,5 @@ class Verify:
                 fl_info = info['files'][i]
                 file = os.path.join(path, *fl_info['path'])
                 files.append((file, fl_info['length']))
-        return self.verify(files, info['piece length'], info['pieces'])
+        self.cache[info['pieces']] = self.verify(files, info['piece length'], info['pieces'])
+        return self.cache[info['pieces']]

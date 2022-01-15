@@ -26,5 +26,5 @@ python index.py --run verify --torrent /BT_BACKUP/xxx.torrent --savepath /downlo
 
 # 感谢
 - [ledccn/IYUUPlus](https://github.com/ledccn/IYUUPlus)
-- [ChisBread/transmission_skip_patch](https://raw.githubusercontent.com/ChisBread/transmission_skip_patch)
+- [ChisBread/transmission_skip_patch](https://github.com/ChisBread/transmission_skip_patch)
 - [stewrutledge/makeTorrent](https://github.com/stewrutledge/makeTorrent)

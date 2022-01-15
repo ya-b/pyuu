@@ -62,5 +62,5 @@ if __name__ == "__main__":
         clfy = Classify(token, get_client(results.client))
         clfy.classify(sites, user_sites, site_details)
     if results.run == 'verify':
-        Verify().verify_torrent(results.torrent, results.savepath)
+        print(f"校验{'成功' if Verify().verify_torrent(results.torrent, results.savepath) else '失败'}")
     print('END')
