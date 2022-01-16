@@ -4,7 +4,7 @@ import time
 import hashlib
 import json
 
-from utils import rmfile
+from utils import rmfile, hash_torrent
 from verify import verify
 from urllib.parse import unquote
 
@@ -247,7 +247,10 @@ class Pyuu:
                 print(f"添加种子失败: {t_file}")
 
     def auto_reseed_dir(self, files, save_path, client):
+        hashs = [x['hash'] for x in client.torrents_info()]
         for torrent in files:
+            if hash_torrent(torrent) in hashs:
+                continue
             if verify.verify_torrent(torrent, save_path):
                 client.torrents_add_file(torrent, save_path=save_path, is_paused=True, is_skip_checking=True)
             else:

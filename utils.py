@@ -42,6 +42,8 @@ def get_files(path, postfix=None):
 
 def hash_torrent(file):
     info = None
+    if not os.path.exists(file) or os.path.isdir(file):
+        return None
     try:
         f = open(file, 'rb')
         info = bencode.bdecode(f.read())['info']
