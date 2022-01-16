@@ -2,8 +2,8 @@ from argparse import ArgumentParser
 from Pyuu import Pyuu
 from classify import Classify
 from client import Client
-from utils import load_file
-from verify import Verify
+from utils import load_file, get_files
+from verify import verify
 
 to_sites = []
 client_cache = {}
@@ -53,14 +53,19 @@ if __name__ == "__main__":
     argparser.add_argument("--savepath", "-s", help="verify：保存目录")
     results = argparser.parse_args()
 
+
     print('START')
     if results.run == 'autoseed':
         pyuu = Pyuu(token)
-        pyuu.auto_reseed(get_client(results.client), get_client(results.client), sites, user_sites)
+        if results.torrent and results.savepath:
+            pyuu.auto_reseed_dir(get_files(results.torrent, '.torrent'), results.savepath, get_client(results.client))
+        else:
+            pyuu.auto_reseed(get_client(results.client), get_client(results.client), sites, user_sites)
         # get_client(results.client_to).tr_recover('./temp')
     if results.run == 'autotag':
         clfy = Classify(token, get_client(results.client))
         clfy.classify(sites, user_sites, site_details)
     if results.run == 'verify':
-        print(f"校验{'成功' if Verify().verify_torrent(results.torrent, results.savepath) else '失败'}")
+        for file in get_files(results.torrent, '.torrent'):
+            print(f"校验{'成功' if verify.verify_torrent(file, results.savepath) else '失败'}")
     print('END')

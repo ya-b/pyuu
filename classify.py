@@ -2,7 +2,7 @@ import re
 import requests
 
 from Pyuu import Pyuu
-from client import Client
+
 
 class Classify:
     def __init__(self, token, client):
@@ -39,7 +39,7 @@ class Classify:
 
     def tag_from_url(self, url, cookie, regx=None):
         if not regx:
-            regx='(基本信息|基本資訊|大小).*(类型|類別).*'
+            regx = '(基本信息|基本資訊|大小).*(类型|類別).*'
         headers = {
             "Cookie": cookie,
             "User-Agent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0',
@@ -59,12 +59,14 @@ class Classify:
 
     def classify_by_exists(self):
         torrents = self.qb.torrents_info()
-        exists_tag = { torrent.content_path: self.strs2tag(torrent.tags) for torrent in torrents if self.strs2tag(torrent.tags) }
+        exists_tag = {torrent.content_path: self.strs2tag(
+            torrent.tags) for torrent in torrents if self.strs2tag(torrent.tags)}
         for torrent in torrents:
             if not self.strs2tag(torrent.tags):
                 for path in exists_tag.keys():
                     if torrent.content_path.startswith(path):
-                        self.qb.torrent_tags.add_tags(tags=exists_tag[path], torrent_hashes=torrent.hash)
+                        self.qb.torrent_tags.add_tags(
+                            tags=exists_tag[path], torrent_hashes=torrent.hash)
                         continue
 
     def classify(self, sites, user_sites, site_details):
@@ -76,40 +78,51 @@ class Classify:
         for info in self.qb.torrents_info():
             if not self.strs2tag(info.tags):
                 if 'tracker.open.cd' in info.tracker:
-                    self.qb.torrent_tags.add_tags(tags=['music'], torrent_hashes=info.hash)
+                    self.qb.torrent_tags.add_tags(
+                        tags=['music'], torrent_hashes=info.hash)
                 if 'greatposterwall.com' in info.tracker:
-                    self.qb.torrent_tags.add_tags(tags=['movie'], torrent_hashes=info.hash)
+                    self.qb.torrent_tags.add_tags(
+                        tags=['movie'], torrent_hashes=info.hash)
                 if 'skyey2.com' in info.tracker or 'pt.skyey.win' in info.tracker:
-                    self.qb.torrent_tags.add_tags(tags=['anim'], torrent_hashes=info.hash)
+                    self.qb.torrent_tags.add_tags(
+                        tags=['anim'], torrent_hashes=info.hash)
         self.classify_by_exists()
 
         if 'pter' in site_details and 'cookie' in site_details['pter']:
             for torrent in self.qb.torrents_info():
                 if not self.strs2tag(torrent.tags) and 'tracker.pterclub.com' in torrent.tracker and 'comment' in torrent.properties:
-                    tag = self.tag_from_url(torrent.properties['comment'], site_details['pter']['cookie'], site_details['pter'].get('classify'))
+                    tag = self.tag_from_url(
+                        torrent.properties['comment'], site_details['pter']['cookie'], site_details['pter'].get('classify'))
                     if tag:
-                        self.qb.torrent_tags.add_tags(tags=tag, torrent_hashes=torrent.hash)
+                        self.qb.torrent_tags.add_tags(
+                            tags=tag, torrent_hashes=torrent.hash)
         self.classify_by_exists()
 
         if 'hares' in site_details and 'cookie' in site_details['hares']:
             for torrent in self.qb.torrents_info():
                 if not self.strs2tag(torrent.tags) and 'club.hares.top' in torrent.tracker:
                     id = re.search('authkey=(\d+)', torrent.tracker).group(1)
-                    tag = self.tag_from_url(f'https://club.hares.top/details.php?id={id}', site_details['hares']['cookie'], site_details['hares'].get('classify'))
+                    tag = self.tag_from_url(
+                        f'https://club.hares.top/details.php?id={id}', site_details['hares']['cookie'], site_details['hares'].get('classify'))
                     if tag:
-                        self.qb.torrent_tags.add_tags(tags=tag, torrent_hashes=torrent.hash)
+                        self.qb.torrent_tags.add_tags(
+                            tags=tag, torrent_hashes=torrent.hash)
         self.classify_by_exists()
 
-        torrents = {torrent.hash: torrent for torrent in self.qb.torrents_info() if not self.strs2tag(torrent.tags)}
+        torrents = {torrent.hash: torrent for torrent in self.qb.torrents_info(
+        ) if not self.strs2tag(torrent.tags)}
         result = self.pyuu.query_site(list(torrents.keys()))
-        result = self.pyuu.get_urls([{'torrent': result}], sites, user_sites)[0]['torrent']
+        result = self.pyuu.get_urls([{'torrent': result}], sites, user_sites)[
+            0]['torrent']
         for site, details in site_details.items():
             is_set = False
             for info in result:
                 if 'info_hash' in info and info['site'] == site and not self.strs2tag(torrents[info['info_hash']].tags):
-                    tag = self.tag_from_url(info['details'], details['cookie'], details.get('classify'))
+                    tag = self.tag_from_url(
+                        info['details'], details['cookie'], details.get('classify'))
                     if tag:
-                        self.qb.torrent_tags.add_tags(tags=tag, torrent_hashes=info['info_hash'])
+                        self.qb.torrent_tags.add_tags(
+                            tags=tag, torrent_hashes=info['info_hash'])
                         is_set = True
             if is_set:
                 self.classify_by_exists()

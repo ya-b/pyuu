@@ -1,3 +1,5 @@
 .vs
-*.cmd
 __pycache__
+db
+temp
+*.cmd

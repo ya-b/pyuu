@@ -5,9 +5,8 @@ import hashlib
 import json
 
 from utils import rmfile
+from verify import verify
 from urllib.parse import unquote
-
-from verify import Verify
 
 
 class Pyuu:
@@ -237,13 +236,19 @@ class Pyuu:
                 self.append_cache(f"{info['sid']}@{info['torrent_id']}\n")
             if limit_sleep:
                 time.sleep(limit_sleep)
-        verify = Verify()
         for t_file, save_path in t_files:
             try:
                 if verify.verify_torrent(t_file, save_path):
                     client_to.torrents_add_file(
                         t_file, save_path=save_path, is_paused=True, is_skip_checking=True)
                 else:
-                    print(f'verification failed: {t_file}')
+                    print(f'校验失败: {t_file}')
             except:
-                print(f"add torrent failed: {t_file}")
+                print(f"添加种子失败: {t_file}")
+
+    def auto_reseed_dir(self, files, save_path, client):
+        for torrent in files:
+            if verify.verify_torrent(torrent, save_path):
+                client.torrents_add_file(torrent, save_path=save_path, is_paused=True, is_skip_checking=True)
+            else:
+                print('校验失败:' + torrent)

@@ -68,3 +68,5 @@ class Verify:
                 files.append((file, fl_info['length']))
         self.cache[info['pieces']] = self.verify(files, info['piece length'], info['pieces'])
         return self.cache[info['pieces']]
+
+verify = Verify()

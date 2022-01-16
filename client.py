@@ -2,9 +2,6 @@ import qbittorrentapi
 import transmissionrpc
 import re
 import os
-import shutil
-import time
-import bencode
 
 from utils import hash_torrent
 

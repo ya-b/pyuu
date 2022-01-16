@@ -6,7 +6,8 @@
 辅种：客户端先调用iyuu服务端接口获取辅种信息->下载种子->每个文件取8~10个piece进行校验（其实也不安全）->跳检添加到qb
 # 使用
 ###0.安装依赖
-先安装python, pip
+
+先安装python, pip，之后运行：
 ```
 pip install -r requirements.txt
 ```
@@ -16,10 +17,15 @@ pip install -r requirements.txt
 
 ###2.运行
 
-client参数为iyppplus里配置的qb客户端名称
+1)辅种
 ```
 python index.py --run autoseed --client localQB
 ```
+2)校验种子文件（文件夹）并辅种
+```
+python index.py --run autoseed --client localQB  --torrent /torrentdir --savepath /downloaddir
+```
+3)校验种子文件（文件夹）
 ```
 python index.py --run verify --torrent /BT_BACKUP/xxx.torrent --savepath /downloaddir
 ```
